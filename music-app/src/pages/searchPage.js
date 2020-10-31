@@ -93,14 +93,24 @@ const SearchPage = () => {
        }
     },[]);
 
+
     useEffect(()=>{
-        if(document.getElementById("pageContainer").offsetHeight > window.innerHeight){
-            document.getElementById("pageContainer").classList.remove('viewportHeight');
-        } else {
-            document.getElementById("pageContainer").classList.add('viewportHeight');        }
+
+            if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
+                document.getElementById("pageContainer").classList.remove("viewportHeight");
+                if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            } else {
+                if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            }
+
     },[]);
 
-        if(loadPageVar("album")){
+
+    if(loadPageVar("album")){
 
 
             if(Object.entries(mutableState).length === 0){
@@ -142,7 +152,6 @@ const SearchPage = () => {
 
 
             if(Object.entries(mutableState).length === 0){
-                console.log(mutableState);
                 return (
                     <div id="pageContainer">
                         <Header setter={[resultArray, setResultArray]} searchPage={[searchPage, setSearchPage]} dMood={[darkMood, setDarkMood]}/>

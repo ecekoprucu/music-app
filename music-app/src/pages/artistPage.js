@@ -9,14 +9,19 @@ const ArtistPage = ({artist}) => {
         document.getElementById(albumName.split(" ").join("")).href= '?album=' + albumID;
     }
 
-
-
     useEffect(()=>{
-        if(document.getElementById("pageContainer").offsetHeight > window.innerHeight){
-            document.getElementById("pageContainer").classList.remove('viewportHeight');
-        } else {
-            document.getElementById("pageContainer").classList.add('viewportHeight');        }
+            if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
+                document.getElementById("pageContainer").classList.remove("viewportHeight");
+                if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            } else {
+                if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            }
     },[]);
+
 
     return(
         <div className="outerDiv">

@@ -7,10 +7,6 @@ const AlbumPage = ({prop, songDetail, darkProps}) => {
     const [playArray, setPlayArray] = useState([]);
     const [explanation, setExplanation] = useState('');
 
-    console.log(prop);
-    console.log(songDetail);
-
-
     useEffect(() => {
         if(document.getElementsByClassName("songName")[0]){
             document.getElementsByClassName("songName")[0].innerHTML = explanation;
@@ -18,11 +14,23 @@ const AlbumPage = ({prop, songDetail, darkProps}) => {
     }, [explanation]);
 
     useEffect(()=>{
-        if(document.getElementById("pageContainer").offsetHeight > window.innerHeight){
-            document.getElementById("pageContainer").classList.remove('viewportHeight');
-        } else {
-            document.getElementById("pageContainer").classList.add('viewportHeight');        }
+
+            if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
+                console.log(document.getElementById("pageContainer").offsetHeight)
+
+                document.getElementById("pageContainer").classList.remove("viewportHeight");
+                if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            } else {
+                console.log(document.getElementById("pageContainer").offsetHeight)
+                if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
+                    document.getElementById("pageContainer").classList.add('viewportHeight');
+                }
+            }
+
     },[]);
+
 
     const playSong = (song) => {
         if(!playArray[0]){
