@@ -93,17 +93,12 @@ const SearchPage = () => {
        }
     },[]);
 
-    useEffect (()=>{
-        window.onload = () => {
-            if(window.innerHeight>document.getElementById("pageContainer").offsetHeight){
-                console.log(document.getElementById("pageContainer").offsetHeight);
-                document.getElementById("pageContainer").classList.add("viewportHeight");
-            } else if (window.innerHeight<=document.getElementById("pageContainer").offsetHeight) {
-                console.log(document.getElementById("pageContainer").offsetHeight);
-                document.getElementById("pageContainer").classList.remove("viewportHeight");
-            }
-        }
-    },[])
+    useEffect(()=>{
+        if(document.getElementById("pageContainer").offsetHeight > window.innerHeight){
+            document.getElementById("pageContainer").classList.remove('viewportHeight');
+        } else {
+            document.getElementById("pageContainer").classList.add('viewportHeight');        }
+    },[]);
 
         if(loadPageVar("album")){
 
