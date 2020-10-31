@@ -1,0 +1,200 @@
+.App {
+  text-align: center;
+}
+#pageContainer{
+  background: whitesmoke;
+  height: auto;
+}
+#searchText{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #616161;
+  outline: none;
+  width: 30%;
+}
+
+.lightText{
+  color: whitesmoke;
+}
+
+.lightText::placeholder{
+  color: whitesmoke;
+}
+
+#searchCover{
+  padding: 20px 20px 20px 20%;
+  box-shadow: 0 0 3px 2px grey;
+  background: #8fcce5;
+  position: relative;
+  text-align: left;
+  opacity: 0.6;
+}
+#searchIcon{
+  cursor: pointer;
+  margin-right: 5px;
+
+}
+#searchClick {
+  position: absolute;
+  margin-left: 3%;
+  padding: 5px;
+  width: auto;
+  border-radius: 5px;
+  background: gainsboro;
+}
+
+#moodChange{
+  position: absolute;
+  right: 50px;
+}
+
+#searchText{
+  height: 20px;
+}
+
+#results {
+  width: 80%;
+  margin: auto;
+  flex-wrap: wrap;
+  display: flex;
+}
+
+.result{
+  display: flex;
+  width: 25%;
+  max-width: 35%;
+  padding: 25px;
+  position: relative;
+  flex-direction: column;
+  margin: 20px auto;
+  background: #cecbcb1f;
+  border-radius: 15px;
+}
+
+.result img {
+  display: inline-block;
+}
+
+.songText{
+  display: inline-block;
+}
+
+.result button {
+  display: block;
+  border-radius: 5px;
+  background: gainsboro;
+  padding: 5px;
+}
+.albumImage{
+  width: 120px;
+}
+#playerContainer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  left: 0;
+}
+#player {
+  box-shadow: 0 0 20px 1px black;
+  border-radius: 25px;
+}
+
+.albumLink {
+  display:block;
+  margin-top: 10px;
+  text-decoration: none;
+}
+.songText{
+  position: relative;
+  text-align: left;
+}
+
+.artistName {
+  position: relative;
+  top: 3%;
+  transform: translateY(-50%);
+  right: 3%;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.licanse{
+  color: black;
+  font-weight: bolder;
+  text-align: right;
+  margin-top: 15px;
+}
+
+.songName{
+  width: 100%;
+  margin: 0;
+  background: #f5f5dcb3;
+  line-height: 30px;
+}
+
+.playButton {
+  font-size: 15px
+}
+
+.viewportHeight{
+  height: 100vh !important;
+  overflow: hidden;
+}
+
+#resultCover {
+  text-align: left;
+  padding: 5%;
+}
+
+.mainContainer {
+  position: relative;
+  display: flex;
+  padding: 20px;
+  max-width: 100%;
+  flex-wrap: wrap;
+}
+
+.artistContainer{
+  display: flex;
+  width: 25%;
+  max-width: 35%;
+  padding: 25px;
+  position: relative;
+  flex-direction: column;
+  margin: 20px auto;
+  background: #cecbcb1f;
+  border-radius: 15px;
+}
+
+#albumContainer{
+  margin-top: 20px;
+}
+@media screen and (max-width: 599px){
+  #searchText{
+    width: 45%;
+  }
+  #searchCover{
+    padding: 20px;
+  }
+  .result, .artistContainer{
+    width: 100%;
+    max-width: 80%;
+  }
+  #searchClick {
+    margin-left: 5%;
+  }
+
+  #moodChange{
+    position: absolute;
+    right: 10px;
+  }
+
+  .artistContainer img {
+    width: 50%;
+    margin: auto;
+  }
+  #albumContainer{
+    height: 450px;
+  }
+}
