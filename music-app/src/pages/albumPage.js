@@ -6,30 +6,38 @@ import ReactDOM from 'react-dom'
 const AlbumPage = ({prop, songDetail, darkProps}) => {
     const [playArray, setPlayArray] = useState([]);
     const [explanation, setExplanation] = useState('');
+    const [height, setHeight] = useState(0);
+
+    useEffect(()=>{
+        setHeight(document.getElementById("pageContainer").offsetHeight);
+    },[]);
+
+
+    useEffect(()=>{
+        if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
+            document.getElementById("pageContainer").classList.remove("viewportHeight");
+            if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                setHeight(window.innerHeight);
+                document.getElementById("pageContainer").classList.add('viewportHeight');
+            } else {
+                setHeight(document.getElementById("pageContainer").offsetHeight);
+            }
+        } else {
+            if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                setHeight(window.innerHeight);
+                document.getElementById("pageContainer").classList.add('viewportHeight');
+            }else {
+                setHeight(document.getElementById("pageContainer").offsetHeight);
+            }
+        }
+
+    },[height]);
 
     useEffect(() => {
         if(document.getElementsByClassName("songName")[0]){
             document.getElementsByClassName("songName")[0].innerHTML = explanation;
         }
     }, [explanation]);
-
-    useEffect(()=>{
-
-            if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
-                console.log(document.getElementById("pageContainer").offsetHeight)
-
-                document.getElementById("pageContainer").classList.remove("viewportHeight");
-                if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
-                    document.getElementById("pageContainer").classList.add('viewportHeight');
-                }
-            } else {
-                console.log(document.getElementById("pageContainer").offsetHeight)
-                if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
-                    document.getElementById("pageContainer").classList.add('viewportHeight');
-                }
-            }
-
-    },[]);
 
 
     const playSong = (song) => {

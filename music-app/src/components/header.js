@@ -9,14 +9,7 @@ const Header = ({setter, dMood, searchPage}) => {
     const token = "1.ZWNla29wcnVjdUBnbWFpbC5jb20=.xjxgd7Q1BO4rybXTE4beobLE";
     const [mood, setMood] = useState(dMood[0]);
 
-    const [height, setHeight] = useState(window.innerHeight);
 
-    useEffect(()=>{
-        if(document.getElementById("pageContainer").offsetHeight > window.innerHeight){
-          document.getElementById("pageContainer").classList.remove('viewportHeight');
-        } else {
-            document.getElementById("pageContainer").classList.add('viewportHeight');        }
-    },[]);
 
     const searchMe = async () => {
 
@@ -65,11 +58,16 @@ const Header = ({setter, dMood, searchPage}) => {
                         return false;
                     }
                     setter[1](results);
-                    if(height>document.getElementById("pageContainer").offsetHeight){
-                        console.log(document.getElementById("pageContainer").offsetHeight);
-                        document.getElementById("pageContainer").classList.add("viewportHeight");
-                    } else if (height<=document.getElementById("pageContainer").offsetHeight) {
+                    if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
                         document.getElementById("pageContainer").classList.remove("viewportHeight");
+                        if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+
+                            document.getElementById("pageContainer").classList.add('viewportHeight');
+                        }
+                    } else {
+                        if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
+                            document.getElementById("pageContainer").classList.add('viewportHeight');
+                        }
                     }
                 });
             }}><FontAwesomeIcon id="searchIcon" icon={faSearch}/>

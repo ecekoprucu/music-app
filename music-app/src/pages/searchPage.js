@@ -15,7 +15,31 @@ const SearchPage = () => {
     const [searchPage, setSearchPage] = useState(false);
     let state = {}
     const [mutableState, setMutableState] = useState({});
+    const [height, setHeight] = useState(0);
 
+    useEffect(()=>{
+        setHeight(document.getElementById("pageContainer").offsetHeight);
+    },[]);
+
+    useEffect(()=>{
+        if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
+            document.getElementById("pageContainer").classList.remove("viewportHeight");
+            if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
+                setHeight(window.innerHeight);
+                document.getElementById("pageContainer").classList.add('viewportHeight');
+            } else {
+                setHeight(document.getElementById("pageContainer").offsetHeight);
+            }
+        } else {
+            if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
+                setHeight(window.innerHeight);
+                document.getElementById("pageContainer").classList.add('viewportHeight');
+            }else {
+                setHeight(document.getElementById("pageContainer").offsetHeight);
+            }
+        }
+
+    },[height]);
 
 
     const getAlbum = async (str) => {
@@ -94,20 +118,7 @@ const SearchPage = () => {
     },[]);
 
 
-    useEffect(()=>{
 
-            if(document.getElementById("pageContainer").classList.contains("viewportHeight")){
-                document.getElementById("pageContainer").classList.remove("viewportHeight");
-                if (document.getElementById("pageContainer").offsetHeight < window.innerHeight) {
-                    document.getElementById("pageContainer").classList.add('viewportHeight');
-                }
-            } else {
-                if (document.getElementById("pageContainer").offsetHeight <= window.innerHeight) {
-                    document.getElementById("pageContainer").classList.add('viewportHeight');
-                }
-            }
-
-    },[]);
 
 
     if(loadPageVar("album")){
