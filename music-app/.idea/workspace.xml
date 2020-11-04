@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a1e23f5-49e0-4a9a-8500-2d4bb0d01aeb" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1jXkEXB002E8qaXEFtwfLmBYWvO" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/context" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/context" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a1e23f5-49e0-4a9a-8500-2d4bb0d01aeb" name="Default Changelist" comment="" />
+      <created>1603957714385</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603957714385</updated>
+      <workItem from="1603957715867" duration="61153000" />
+      <workItem from="1604137118617" duration="55000" />
+      <workItem from="1604137301731" duration="37440000" />
+      <workItem from="1604332767258" duration="3320000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603960027264">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="184" y="103" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.836@0.23.1440.836" timestamp="1603960027264" />
+    <state width="500" height="445" key="SwitcherDM" timestamp="1604219487218">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="500" height="445" key="SwitcherDM/0.23.1440.836@0.23.1440.836" timestamp="1604219487218" />
+    <state x="418" y="167" width="604" height="548" key="find.popup" timestamp="1603992589423">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="418" y="167" width="604" height="548" key="find.popup/0.23.1440.836@0.23.1440.836" timestamp="1603992589423" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1603978781860">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1440.836@0.23.1440.836" timestamp="1603978781860" />
+    <state x="385" y="200" key="run.anything.popup" timestamp="1604218212990">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="385" y="200" key="run.anything.popup/0.23.1440.836@0.23.1440.836" timestamp="1604218212990" />
+    <state x="385" y="183" width="670" height="676" key="search.everywhere.popup" timestamp="1604335361900">
+      <screen x="0" y="23" width="1440" height="836" />
+    </state>
+    <state x="385" y="183" width="670" height="676" key="search.everywhere.popup/0.23.1440.836@0.23.1440.836" timestamp="1604335361900" />
+  </component>
+</project>

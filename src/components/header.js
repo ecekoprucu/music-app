@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faSearch, faMoon, faSun} from '@fortawesome/free-solid-svg-icons';
-import axios from 'axios'
+import axios from 'axios';
 
 const Header = ({setter, dMood, searchPage}) => {
 
